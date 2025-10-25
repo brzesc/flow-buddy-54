@@ -1,5 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ShoppingCart, Mail, DollarSign, TrendingUp } from "lucide-react";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { Info } from "lucide-react";
 
 const stats = [
   {
@@ -47,6 +49,15 @@ export default function Dashboard() {
           Welcome back! Here's what's happening today.
         </p>
       </div>
+
+      <Alert>
+        <Info className="h-4 w-4" />
+        <AlertTitle>Welcome to Order Manager</AlertTitle>
+        <AlertDescription>
+          Your centralized platform for managing orders, customers, and communications.
+          Use keyboard shortcuts to navigate quickly between sections.
+        </AlertDescription>
+      </Alert>
 
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         {stats.map((stat) => (
